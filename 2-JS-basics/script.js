@@ -56,6 +56,7 @@ console.log(firstName + ' ' + lastName);
 /*****************************
 * Basic operators
 */
+/*
 var year, yearJohn, yearMark;
 now = 2018;
 ageJohn = 28;
@@ -83,7 +84,7 @@ console.log(typeof ageJohn);
 console.log(typeof 'Mark is older than John');
 var x;
 console.log(typeof x);
-
+*/
 
 
 
@@ -91,7 +92,7 @@ console.log(typeof x);
 /*****************************
 * Operator precedence
 */
-
+/*
 var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
@@ -119,7 +120,7 @@ x += 10;
 console.log(x);
 x--;
 console.log(x);
-
+*/
 
 
 
@@ -198,12 +199,14 @@ if (BMIMark > BMIJohn) {
 */
 
 var firstName = 'John';
-var age = 16;
+var age = 20;
 
 if (age < 13) {
   console.log(firstName + ' is a boy.');
-} else if () { // Between 13 and 20
+} else if (age >= 13 && age < 20) {
   console.log(firstName + ' is a teenager.');
+} else if (age >= 20 && age < 30) {
+  console.log(firstName + ' is a young man.');
 } else {
   console.log(firstName + ' is a man.');
 }
