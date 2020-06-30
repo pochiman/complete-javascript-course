@@ -372,12 +372,11 @@ yearsUntilRetirement(1969, 'Jane');
 /*****************************
 * Function Statements and Expressions
 */
-
+/*
 // Function declaration
 // function whatDoYouDo(job, firstName) {}
 
 // Function expression
-/*
 var whatDoYouDo = function(job, firstName) {
   switch(job) {
     case 'teacher':
@@ -395,6 +394,7 @@ console.log(whatDoYouDo('teacher', 'John'));
 console.log(whatDoYouDo('designer', 'Jane'));
 console.log(whatDoYouDo('retired', 'Mark'));
 */
+
 
 
 /*****************************
@@ -450,3 +450,26 @@ In the end, John would like to have 2 arrays:
 
 GOOD LUCK 😀
 */
+
+function tipCalculator(bill) {
+  var percentage;
+  if (bill < 50) {
+    percentage = .2;
+  } else if (bill >= 50 && bill < 200) {
+    percentage = .15;
+  } else {
+    percentage = .1;
+  }
+  return percentage * bill;
+}
+
+var bills = [124, 48, 268];
+var tips = [tipCalculator(bills[0]),
+            tipCalculator(bills[1]),
+            tipCalculator(bills[2])];
+
+var finalValues = [bills[0] + tips[0],
+                   bills[1] + tips[1],
+                   bills[2] + tips[2]];
+                   
+console.log(tips, finalValues);                   
