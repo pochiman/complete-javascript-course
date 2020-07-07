@@ -585,3 +585,8 @@ if (john.calcBMI() > mark.calcBMI()) {
 for (var i = 0; i < 10; i++) {
   console.log(i);
 }
+
+// i = 0, 0 < 10 true, log i to console, i++
+// i = 1, 1 , 10 true, log i to the console, i++
+//...
+// i = 1, 1 , 10 true, log i to the console, i++
