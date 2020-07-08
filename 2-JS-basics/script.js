@@ -582,11 +582,17 @@ if (john.calcBMI() > mark.calcBMI()) {
 * Loops and iteration
 */
 
-for (var i = 0; i < 10; i++) {
+for (var i = 1; i <= 20; i += 2) {
   console.log(i);
 }
 
 // i = 0, 0 < 10 true, log i to console, i++
 // i = 1, 1 , 10 true, log i to the console, i++
 //...
-// i = 1, 1 , 10 true, log i to the console, i++
+// i = 9, 9 < 10 true, log i to the console, i++
+// i = 10, 10 < 10 FALSE, exit the loop!
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+for (var i = 0; i < john.length; i++) {
+  console.log(john[i]);
+}
