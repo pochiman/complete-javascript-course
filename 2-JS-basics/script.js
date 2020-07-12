@@ -656,3 +656,33 @@ Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the 
 
 GOOD LUCK 😀
 */
+
+var john = {
+  fullName: 'John Smith',
+  bills: [124, 48, 268, 180, 42],
+  calcTips: function() {
+    this.tips = [];
+    this.finalValues = [];
+
+    for (var i = 0; i < this.bills.length; i++) {
+      // Determine percentage based on tipping rules
+      var percentage;
+      var bill = this.bills[i];
+
+      if (bill < 50) {
+        percentage = .2;
+      } else if (bill >= 50 && bill < 200) {
+        percentage = .15;
+      } else {
+        percentage = .1;
+      }
+
+      // Add results to the corresponding arrays
+      this.tips[i] = bill * percentage;
+      this.finalValues[i] = bill + bill * percentage;
+    }
+  }
+}
+
+john.calcTips();
+console.log(john);
